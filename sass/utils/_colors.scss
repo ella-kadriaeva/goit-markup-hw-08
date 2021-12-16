@@ -1,0 +1,14 @@
+$colors: (
+    'primary': #757575,
+    'social': #afb1b8,
+    'title': #212121,
+    'accent': #2196f3,
+    'accentwhite': #ffffff,
+    'buttonbg': #f5f4fa,
+    'footerbg': #2f303a,
+    'address': rgba(255, 255, 255, 0.6),
+    'headerbg': #ffffff,
+);
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

@@ -1,0 +1,115 @@
+.page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid getColor('buttonbg');
+}
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+.site-nav__list {
+    display: flex;
+    margin-left: 93px;
+}
+.site-nav__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.link {
+    display: block;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
+
+    &--invers {
+        color: getColor('address');
+    }
+}
+
+.site-nav__link {
+    color: getColor('title');
+
+    &--current {
+        color: getColor('accent');
+    }
+    &--current::after {
+        position: absolute;
+        bottom: -32px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: getColor('accent');
+    }
+}
+
+.page-header__icon {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+    fill: getColor('primary');
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--dimension {
+        width: 10px;
+        height: 16px;
+    }
+
+    &:hover,
+    &:focus {
+        fill: getColor('accent');
+    }
+}
+
+.page-header__list {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.page-header__link {
+    color: getColor('primary');
+
+    &:focus .page-header__icon,
+    &:hover .page-header__icon {
+        fill: getColor('accent');
+    }
+}
+
+.page-header__item + .page-header__item {
+    margin-left: 50px;
+}
+
+.address__item {
+    margin-bottom: 9px;
+    margin-top: 0;
+    font-style: normal;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.address__link {
+    color: getColor('accentwhite');
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
