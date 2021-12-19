@@ -1,13 +1,18 @@
 .page-header {
+    position: relative;
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 2px solid getColor('buttonbg');
 }
+
 .site-nav {
     display: flex;
     align-items: center;
 }
 .site-nav__list {
+    @media screen and(max-width: 768px) {
+        display: none;
+    }
     display: flex;
     margin-left: 93px;
 }
@@ -80,6 +85,9 @@
 }
 
 .page-header__list {
+    @media screen and(max-width: 768px) {
+        display: none;
+    }
     display: flex;
     margin-left: auto;
     align-items: center;
