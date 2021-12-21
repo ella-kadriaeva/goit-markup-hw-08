@@ -151,12 +151,17 @@
         </div>
     </section>
     <!--Секция наша команда-->
-    <!-- <section class="section team">
+    <section class="section team">
         <div class="container">
             <h2 class="section__title">Наша команда</h2>
             <ul class="team__list">
                 <li class="team__item">
-                    <img  src="./images/card1.jpg" alt="Product Designer" width="450">
+                    <picture>
+                        <source srcset="./images/card1-desktop1x.jpg 1x, ./images/card1-desktop2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/card1-tablet1x.jpg 1x, ./images/card1-tablet2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/card1-mobile1x.jpg 1x, ./images/card1-mobile2x.jpg 2x" media="(min-width: 480px)">
+                        <img src="./images/card1-desktop1x.jpg " alt="Product Designer"/>
+                    </picture>
                     <div class="team__wrapp">
                         <h3 class="team__member">Игорь Демьяненко</h3> 
                         <p class="team__master">Product Designer</p>
@@ -195,8 +200,15 @@
                     </div>
                     
                 </li>
+
                 <li class="team__item">
-                    <img  src="./images/card2.jpg" alt="Frontend Developer" width="270">
+                    <picture>
+                        <source srcset="./images/card2-desktop1x.jpg 1x, ./images/card2-desktop2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/card2-tablet1x.jpg 1x, ./images/card2-tablet2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/card2-mobile1x.jpg 1x, ./images/card2-mobile2x.jpg 2x" media="(min-width: 480px)">
+                        <img src="./images/card2-desktop1x.jpg" alt="Frontend Developer">
+                    </picture>
+                    
                     <div class="team__wrapp">
                         <h3 class="team__member"> Ольга Репина</h3>
                         <p class="team__master"> Frontend Developer</p>
@@ -235,7 +247,12 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img  src="./images/card3.jpg" alt="Marketing" width="270">
+                    <picture>
+                        <source srcset="./images/card3-desktop1x.jpg 1x, ./images/card3-desktop2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/card3-tablet1x.jpg 1x, ./images/card3-tablet2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/card3-mobile1x.jpg 1x, ./images/card3-mobile2x.jpg 2x" media="(min-width: 480px)">
+                        <img src="./images/card3-desktop1x.jpg" alt="Marketing">
+                    </picture>
                     <div class="team__wrapp">
                         <h3 class="team__member"> Николай Тарасов</h3> 
                         <p class="team__master">Marketing</p>
@@ -274,7 +291,12 @@
                     </div>
                 </li>
                 <li class="team__item">
-                    <img  src="./images/card4.jpg" alt="UI Designer" width="270">
+                    <picture>
+                        <source srcset="./images/card4-desktop1x.jpg 1x, ./images/card4-desktop2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/card4-tablet1x.jpg 1x, ./images/card4-tablet2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/card4-mobile1x.jpg 1x, ./images/card4-mobile2x.jpg 2x" media="(min-width: 480px)">
+                        <img src="./images/card4-desktop1x.jpg" alt="UI Designer">
+                    </picture>
                     <div class="team__wrapp">
                         <h3 class="team__member"> Михаил Ермаков </h3> 
                         <p class="team__master">UI Designer</p>
@@ -314,7 +336,7 @@
                 </li>
             </ul>
         </div>
-    </section> -->
+    </section>
 
     <section class="section clients">
         <div class="container">
