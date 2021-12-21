@@ -44,10 +44,14 @@
 }
 
 .social__list {
+    margin: 0 auto;
     display: flex;
-    didth: 206px;
-    justify-content: center;
+    width: 206px;
+
     @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+    }
+    &--footer {
         justify-content: space-between;
     }
 }
