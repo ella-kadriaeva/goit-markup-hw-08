@@ -4,6 +4,7 @@
   display: none;
   position: absolute;
   background-color: turquoise;
+  padding-top: 48px;
   text-align: center;
   top: 100%;
   left: 0;
@@ -24,12 +25,19 @@
   background-color: rebeccapurple;
 }
 
+.menu-toggle {
+  border-radius: 50%;
+  outline: none;
+}
+
 .mobile-nav__button {
   min-height: 40px;
   min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  margin: 0;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -37,6 +45,12 @@
 
 .mobile-nav__button--close {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav__button {
+    display: none;
+  }
 }
 
 .mobile-nav__button--close {
@@ -121,10 +135,6 @@ body.modal-open {
   .container {
     width: 1200px;
   }
-}
-
-.container--flex {
-  display: flex;
 }
 
 .section {
@@ -224,9 +234,28 @@ body.modal-open {
 
 .page-header {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 2px solid #f5f4fa;
+}
+
+.page-header--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .site-nav {
@@ -235,13 +264,12 @@ body.modal-open {
 }
 
 .site-nav__list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .site-nav__list {
-    display: none;
+    display: flex;
   }
 }
 
@@ -251,6 +279,21 @@ body.modal-open {
 
 .site-nav__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__wrapp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__wrapp {
+    margin-left: 93px;
+  }
 }
 
 .link {
@@ -294,17 +337,28 @@ body.modal-open {
   display: inline-block;
   cursor: pointer;
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
   fill: #757575;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 14px;
+  height: 10px;
 }
 
 .page-header__icon--dimension {
   width: 10px;
-  height: 16px;
+  height: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__icon {
+    width: 16px;
+    height: 12px;
+  }
+  .page-header__icon--dimension {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .page-header__icon:hover, .page-header__icon:focus {
@@ -312,14 +366,19 @@ body.modal-open {
 }
 
 .page-header__list {
-  display: flex;
+  display: none;
   margin-left: auto;
-  align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .page-header__list {
-    display: none;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__list {
+    display: flex;
   }
 }
 
@@ -327,13 +386,30 @@ body.modal-open {
   color: #757575;
 }
 
+@media screen and (min-width: 768px) {
+  .page-header__link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__link {
+    font-size: 14px;
+    line-height: 1.71;
+    align-items: center;
+  }
+}
+
 .page-header__link:focus .page-header__icon,
 .page-header__link:hover .page-header__icon {
   fill: #2196f3;
 }
 
-.page-header__item + .page-header__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .page-header__item + .page-header__item {
+    margin-left: 50px;
+  }
 }
 
 .address__item {
@@ -357,10 +433,17 @@ body.modal-open {
   color: #000000;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   text-decoration: none;
   transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
 .logo:hover, .logo:focus, .logo__part {
@@ -376,7 +459,7 @@ body.modal-open {
 
 .hero {
   min-height: 400px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile1x.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-modile1x.jpg");
   padding-top: 118px;
   padding-bottom: 118px;
   background-size: cover;

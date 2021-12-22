@@ -2,7 +2,7 @@
     display: none;
     position: absolute;
     background-color: turquoise;
-    // padding-top: 48px;
+    padding-top: 48px;
     text-align: center;
     top: 100%;
     left: 0;
@@ -21,10 +21,10 @@
     }
 }
 
-// .menu-toggle {
-//     border-radius: 50%;
-//     outline: none;
-// }
+.menu-toggle {
+    border-radius: 50%;
+    outline: none;
+}
 
 .mobile-nav__button {
     min-height: 40px;
@@ -32,13 +32,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: transparent;
-    // margin: 0;
+    background-color: transparent;
+    margin: 0;
     padding: 0;
     border: none;
     cursor: pointer;
 
     &--close {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
         display: none;
     }
 }
