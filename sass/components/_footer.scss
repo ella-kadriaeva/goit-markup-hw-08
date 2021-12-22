@@ -25,6 +25,7 @@
     }
     @media screen and (min-width: 1200px) {
         margin-right: 90px;
+        margin-left: 0;
         text-align: start;
     }
 }
@@ -73,13 +74,13 @@
         margin-left: 94px;
         padding-top: 12px;
         align-items: flex-start;
+        flex-basis: 358px;
     }
 }
 
 .page-footer__input {
     background-color: getColor('footerbg');
     align-items: stretch;
-
     height: 50px;
     padding: 15px 16px;
     margin: 0;
@@ -88,8 +89,9 @@
     border-radius: 4px;
     outline: none;
     color: getColor('accentwhite');
+
     @media screen and (min-width: 1200px) {
-        width: 358px;
+        width: 100%;
     }
 
     &::placeholder {

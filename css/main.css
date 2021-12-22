@@ -829,6 +829,7 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .page-footer__list {
     margin-right: 90px;
+    margin-left: 0;
     text-align: start;
   }
 }
@@ -886,6 +887,7 @@ body.modal-open {
     margin-left: 94px;
     padding-top: 12px;
     align-items: flex-start;
+    flex-basis: 358px;
   }
 }
 
@@ -904,7 +906,7 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .page-footer__input {
-    width: 358px;
+    width: 100%;
   }
 }
 
