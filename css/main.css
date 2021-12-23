@@ -1,36 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 .menu-container {
+  background-color: turquoise;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: none;
   position: absolute;
-  background-color: turquoise;
   padding-top: 48px;
-  text-align: center;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 500px;
+  padding-right: 25px;
 }
 
 .menu-container.is-open {
   display: block;
 }
 
-.menu-container.is-open .mobile-nav__button--close {
-  display: block;
+@media screen and (min-width: 767px) {
+  .menu-container {
+    display: none;
+  }
 }
 
-.menu-container.is-open .mobile-nav__button--menu {
-  display: none;
-  background-color: rebeccapurple;
-}
-
-.menu-toggle {
-  border-radius: 50%;
-  outline: none;
-}
-
-.mobile-nav__button {
+.mobile-button {
   min-height: 40px;
   min-width: 40px;
   display: flex;
@@ -41,28 +34,37 @@
   padding: 0;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
-.mobile-nav__button--close {
+.mobile-button.is-open .js-open-menu {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
-  .mobile-nav__button {
+.mobile-button.is-open .js-close-menu {
+  margin-left: auto;
+  display: flex;
+}
+
+@media screen and (min-width: 767px) {
+  .mobile-button {
     display: none;
   }
 }
 
-.mobile-nav__button--close {
-  border: 2px solid red;
-  width: 50px;
-  height: 50px;
-  outline: olivedrab;
+.js-close-menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
-.mobile-nav__button--menu {
-  outline: orangered;
-  background-color: orchid;
+.mobile-menu__item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #212121;
 }
 
 .visually-hidden {
@@ -233,7 +235,6 @@ body.modal-open {
 }
 
 .page-header {
-  position: relative;
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 2px solid #f5f4fa;
