@@ -41,7 +41,7 @@
                     
                         <div class="mobile-menu">
                             <ul class="mobile-menu__list mobile-menu">
-                                <li class="mobile-menu__item"><a href="" class="mobile-menu__link mobile-menu--current link">Студия</a></li>
+                                <li class="mobile-menu__item"><a href="" class="mobile-menu__link mobile-menu__link--current link">Студия</a></li>
                                 <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a></li>
                                 <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Контакты</a></li>
                             </ul>
@@ -53,18 +53,18 @@
                                         info@devstudio.com
                             </a>
                             <ul class="mobile-menu__wrapp">
-                                <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="mobile-menu__social link">Instagram</a>
+                                <li class="mobile-menu__point"><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="mobile-menu__social link">Instagram</a>
                                 </li>
                             
-                                <li>
+                                <li class="mobile-menu__point">
                                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="mobile-menu__social link">Twitter</a>
                                 </li>
                             
-                                <li>
+                                <li class="mobile-menu__point">
                                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="mobile-menu__social link">Facebook</a>
                                 </li>
                             
-                                <li>
+                                <li class="mobile-menu__point">
                                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu__social link">LinkedIn</a>
                                 </li>
                             </ul>
@@ -158,19 +158,34 @@
             <ul class="works__list">
                 <li class="works__item">
                     <div class="works__wrapp">
-                        <img src="./images/box1.jpg" alt="рабочий стол с планшетом и клавиатурой" width="370">
+                        <picture>
+                            <source srcset="./images/box1.jpg 1x, ./images/box1-2.jpg 2x"
+                                media="(min-width: 1200px)">
+                            
+                            <img src="./images/box1.jpg" alt="рабочий стол с планшетом и клавиатурой" >
+                        </picture>
+                        
                         <h3 class="works__title">Десктопные приложения</h3>
                     </div>
                 </li>
                 <li class="works__item">
                     <div class="works__wrapp">
-                        <img src="./images/box2.jpg" alt="ноутбук и мобильный телефон" width="370">
+                        <picture>
+                            <source srcset="./images/box2.jpg 1x, ./images/box2-2.jpg 2x" media="(min-width: 1200px)">
+                        
+                            <img src="./images/box2.jpg" alt="ноутбук и мобильный телефон" >
+                        </picture>
+                        
                         <h3 class="works__title">Мобильные приложения</h3>
                     </div>
                 </li>
                 <li class="works__item">
                     <div class="works__wrapp">
-                        <img src="./images/box3.jpg" alt="планшет с цветовой палитрой" width="370">
+                        <picture>
+                            <source srcset="./images/box3.jpg 1x, ./images/box3-2.jpg 2x" media="(min-width: 1200px)">
+                            <img src="./images/box3.jpg" alt="планшет с цветовой палитрой">
+                        </picture>
+                        
                         <h3 class="works__title">Дизайнерские решения</h3>
                     </div>
                 </li>

@@ -1,13 +1,14 @@
 .filter {
-    width: 612px;
     display: flex;
+    justify-content: center;
+    gap: 8px;
     margin-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
-}
-
-.filter__item + .filter__item {
-    margin-left: 8px;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
 }
 
 .portfolio {

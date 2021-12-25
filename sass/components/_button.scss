@@ -48,8 +48,12 @@
 
 .filter__button {
     @extend %button;
+    margin: 0;
+    padding: 0;
     background-color: getColor('buttonbg');
+
     color: getColor('title');
+    // max-width: 128px;
     font-weight: 500;
     line-height: 1.62;
     letter-spacing: 0.03em;
